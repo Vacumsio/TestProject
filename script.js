@@ -1,4 +1,4 @@
-function changeStyle(bool)
+function changeStyle(bool) //Данные на входе в функию "Булевы"
 {
 	if (bool)
 	{		
@@ -13,60 +13,22 @@ function changeStyle(bool)
 	return style;
 }
 
-function validDate(val) {
-	const inputDate = new Date(val).toISOString().slice(0, 10); // введенная дата (обрезанная до год-месяц-день)
+function validDate(value) //проверка вводимой даты
+{
+	const inputDate = new Date(value).toISOString().slice(0, 10); // введенная дата (обрезанная до год-месяц-день)
 	const currentDate = new Date().toISOString().slice(0, 10); // текущая дата (обрезанная до год-месяц-день)
 	const res = (inputDate < currentDate); // сравниваем...
 		(res) ? changeStyle(true) : changeStyle(false); // выводим ок или не ок
 	return res; // возвращаем true или false
 }
 
-function readIn(mean) //чтение строки Input
-{
-	var data = document.getElementsByTagName("input")[mean].value;
-	return data;
-}
 
-function checkMean(mean)
-{
-	if(document.getElementById("surname").value.replace(/\s+/g, '').length)
+function checkData (personalData) //проверка строк ФИО
+{	
+	if(/[^А-яЁёA-z\. ]/.test(personalData))
 	{
-		mean=0;
-		return mean;
-	}
-	if(document.getElementById("name").value.replace(/\s+/g, '').length)
-	{
-		mean=1;
-		return mean;
-	}
-	if(document.getElementById("fathers_name").value.replace(/\s+/g, '').length)
-	{
-		mean=2;
-		return mean;
-	}
-		
-}
-
-function checkData() //проверка строки Input на наличие ошибок
-{	var mean = checkMean();
-	var userData = readIn(mean);
-	
-	if (isNaN(userData)) 
-	{
-		changeStyle(true)
-		return style;
+		changeStyle(false);
 	}
 		else
-		{
-			if(userData == "")
-			{
-				changeStyle(true)
-				return style;
-			}
-				else if (!isNaN(userData))
-				{
-					changeStyle(false);
-					return style;
-				}
-		}
+			changeStyle(true);
 }
