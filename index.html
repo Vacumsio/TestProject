@@ -5,8 +5,6 @@
 	<meta charset="utf-8">
 	<title>Верстка</title>
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="jQuery.js"></script>
-	<script src="https://momentjs.com/downloads/moment.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,17 +19,17 @@
 			<table id ="table" cellpadding="0" cellspacing="0" border="1">
             	<tr>
                  	<td><b>*</b>ФАМИЛИЯ</td>
-                 	<td id="info"><input class="hide" id="surname" type="text" placeholder="Ваша фамилия" onchange="checkData()"></td>
+                 	<td id="info"><input class="hide" id="surname" type="text" placeholder="Ваша фамилия" onchange="checkData(this.value)"></td>
                 </tr>
 
                 <tr >
                  	<td><b>*</b>ИМЯ</td>
-                	<td id="info"><input class="hide" id="name" type="text" placeholder="Ваше имя" onchange="checkData()"></td>
+                	<td id="info"><input class="hide" id="name" type="text" placeholder="Ваше имя" onchange="checkData(this.value)"></td>
                 </tr>
 
                 <tr>
                 	<td><b>*</b>ОТЧЕСТВО</td>
-                	<td id="info"><input class="hide" id="fathers_name" type="text" placeholder="Ваше отчество" onchange="checkData()"></td>
+                	<td id="info"><input class="hide" id="fathers_name" type="text" placeholder="Ваше отчество" onchange="checkData(this.value)"></td>
                 </tr>
 
                 <tr>
