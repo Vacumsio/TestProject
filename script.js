@@ -25,13 +25,10 @@ function validDate(value) //проверка вводимой даты
 
 function checkData (personalData) //проверка строк ФИО
 {	
-	
-	if (isNaN(personalData)) 
+	if(/[^А-яЁёA-z\. ]/.test(personalData))
 	{
-		changeStyle(true);
+		changeStyle(false);
 	}
-		else if (!isNaN(personalData))
-		{
-			changeStyle(false);
-		}		
+		else
+			changeStyle(true);
 }
