@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid #b5b7ba;
+    background-color: #dfdfdf;
+    margin: 0 auto;
+    height: 80px;
+    text-align: center;
+    padding-top: 18px;
+    color: #FF9695;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.content {
+    min-width: 1000px;
+    margin: 0 auto;
+    min-height: calc(100vh - 140px);
+}
+
+input:focus {
+    outline: none;
+}
+
+.content h2 {
+    text-align: left;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-left: inherit;
+    color: #0C9DD1;
+}
+
+.main {
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -40%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    width: 800px;
+    height: 350px;
+    background-color: #ffffff;
+    color: #2D3B43;
+    background-position: center;
+    float: left;
+    margin-left: inherit;
+}
+
+.box b {
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    color: #FF6E7C;
+}
+
+.box tr {
+    width: 250px;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+}
+
+.box td {
+    color: #242424;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#table {
+    width: 100%;
+    height: 100%;
+    border: 0px solid #E0E4E6;
+    font-weight: bold;
+}
+
+#info {
+    width: 550px;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+}
+
+#info:hover {
+    background-color: #F3FAFD;
+    z-index: 1;
+}
+
+#info:hover: after {
+    right: 50px;
+    color: #A5CD59;
+    z-index: 1;
+}
+
+#error {
+    content: attr(data_title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 16px;
+    right: 0;
+    bottom: -35px; /* Положение подсказки */
+    background: rgba(255, 54, 56, 0.6); /* Wвет фона */
+    color: #FEFFFE; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 16px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+    width: 780px;
+    height: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.hide {
+    border-color: transparent;
+    background-color: inherit;
+}
+
+.footer {
+    background-color: #434445;
+    width: 100%;
+    float: left;
+    height: 140px;
+    text-align: center;
+    color: #a4a4a4;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 140px;
+}
